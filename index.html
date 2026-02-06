@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开始答题</title>
+    <style>
+        /* 简单美化，让页面更友好 */
+        body { 
+            margin: 0; 
+            padding: 20px; 
+            font-family: 微软雅黑; 
+            text-align: center;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #startBtn {
+            padding: 12px 30px;
+            font-size: 18px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #startBtn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>冲压质量试题</h2>
+        <button id="startBtn">开始答题</button>
+    </div>
+
+    <script>
+        // 替换成你的试题网址列表
+        const questionUrls = [
+             "https://ks.wjx.com/vm/PDY9ouf.aspx#",
+            "https://ks.wjx.com/vm/mvdRfiP.aspx#",
+            "https://ks.wjx.com/vm/YfWEngV.aspx#",
+            "https://ks.wjx.com/vm/h4L6PwR.aspx#",
+            "https://ks.wjx.com/vm/h4L6PwR.aspx#",
+            "https://ks.wjx.com/vm/tid5GVs.aspx#",
+            "https://ks.wjx.com/vm/Qi1wm0V.aspx#",
+            "https://ks.wjx.com/vm/wdJcDSM.aspx#",
+            "https://ks.wjx.com/vm/PpySfYX.aspx#",
+            "https://ks.wjx.com/vm/OtZauNZ.aspx#"
+        ];
+
+        // 点击按钮后随机跳转
+        document.getElementById("startBtn").addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * questionUrls.length);
+            const targetUrl = questionUrls[randomIndex];
+            window.location.href = targetUrl;
+        });
+    </script>
+</body>
+</html>
